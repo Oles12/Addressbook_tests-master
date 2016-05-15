@@ -38,6 +38,7 @@ public class GroupHelper extends HelperBase {
     }
 
     private void selectGroupByIndex(int index) {
+
         click(By.xpath("//input[@name='selected[]'][" + (index+1) +"]"));
     }
 
@@ -53,7 +54,7 @@ public class GroupHelper extends HelperBase {
     }
 
     public List<GroupData> getGroups() {
-        List<GroupData> groups = new ArrayList<GroupData>();
+        List<GroupData> groups = new ArrayList<>();
         List<WebElement> checkboxes = driver.findElements(By.name("selected[]"));
         for (WebElement checkbox:checkboxes) {
          GroupData group = new GroupData();

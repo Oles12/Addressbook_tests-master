@@ -65,13 +65,15 @@ public class ContactsData implements Comparable<ContactsData> {
         return birthYear;
     }
 
+
     @Override
     public String toString() {
         return "ContactsData{" +
-                "last_name='" + last_name + '\'' +
+                "address1='" + address1 + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
                 '}';
     }
-
 
     @Override
     public int hashCode() {
