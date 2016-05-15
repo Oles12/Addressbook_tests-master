@@ -55,22 +55,14 @@ public class TestBase {
         List<Object[]> list = new ArrayList<>();
             for (int i = 0; i < 5; i++) {
             ContactsData contacts = new ContactsData();
-            contacts.last_name = generateRandomStringContacts();
-            contacts.first_name = generateRandomStringContacts();
-            contacts.address1 = generateRandomStringContacts();
+            contacts.last_name = generateRandomString();
+            contacts.first_name = generateRandomString();
+            contacts.address1 = generateRandomString();
             list.add(new Object[]{contacts});
         }
         return list.iterator();
     }
-    public String generateRandomStringContacts () {
-        Random rnd1 = new Random();
-        if (rnd1.nextInt(3) == 0) {
-            return "";
-        } else {
-            return "Test" + rnd1.nextInt();
-        }
 
-    }
     }
 
 
